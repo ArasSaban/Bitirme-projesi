@@ -25,9 +25,8 @@ class MailController extends Controller
             
         ];
 
-        if($request->department) {
-            return "ok";
-        }
+        dd($request->all());
+        
     }
 
 
