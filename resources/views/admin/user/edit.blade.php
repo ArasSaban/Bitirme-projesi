@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Kullancı kayıt
+        <li class="breadcrumb-item active" aria-current="page">Kullancı bilgilerini güncelle
              </li>
             </ol>
         </nav>
@@ -41,8 +41,8 @@
                       <label>Tel No </label>
                       <input  type="text" name="mobile_number" class="form-control " value ="{{$user->mobile_number}}">
                   </div>
-
-                  <div class="form-group">
+<br>
+                  <div class="form-group" >
                       <label>Department</label>
                       <select  name="department_id"  required="">
                         @foreach(App\Models\Department::all() as $department)
@@ -50,7 +50,7 @@
                         @endforeach
                       </select>
                   </div>
-                  
+                  <br>
                   <div class="form-group">
                       <label>Maaş</label>
                       <input  type="text" required="" name="designation" class="form-control " value ="{{$user->designation}}">
@@ -82,6 +82,7 @@
                       <label>Password</label>
                       <input  type="password"  name="password" class="form-control">
                   </div>
+                  <br>
                   <div class="form-group">
                       <label>Rol</label>
                       <select name="role_id" required="" name="role_id">

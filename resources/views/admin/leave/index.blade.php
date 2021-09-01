@@ -17,7 +17,7 @@
       <th scope="col">Bitiş Tarihi</th>
       <th scope="col">Açıklama</th>
       <th scope="col">Izin Türü</th>
-      <th scope="col">Yanıt</th>
+      
       <th scope="col">Durum</th>
       <th scope="col">Onay / Red</th>
       
@@ -31,7 +31,7 @@
       <td>{{$leave->to}}</td>
       <td>{{$leave->description}}</td>
       <td>{{$leave->type}}</td>
-      <td>{{$leave->message}}</td>
+      
       <td>
       @if($leave->status == 0)
         <span class="badge bg-info text-dark">Bekliyor </span>
@@ -68,10 +68,7 @@
                                                             </select>    
                                                           </div>
                                                             <br>
-                                                          <div class="form-group">
-                                                            <label>Açıklama</label>
-                                                            <textarea class="form-control" name="message"></textarea>
-                                                          </div>
+                                                         
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Iptal</button>

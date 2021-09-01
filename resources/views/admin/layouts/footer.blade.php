@@ -40,6 +40,7 @@
                 })
             </script>
 
+            
             <script type="text/javascript">
                 $('#mail').on('change',function () {
                     if(this.value == "1") {
@@ -53,11 +54,9 @@
                     }else {
                         $("#person").hide() 
                     }
-
-                   
-                    
                 })
 
             </script>
+            
     </body>
 </html>

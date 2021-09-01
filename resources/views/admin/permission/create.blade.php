@@ -85,8 +85,8 @@
                             <tr>
                                 <td>Onaylama</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><input type ="checkbox" name="name[leave][can-edit]" value="1"></td>
+                                <td><input type ="checkbox" name="name[leave][can-delete]" value="1"></td>
                                 <td></td>
                                 <td><input type="checkbox" name="name[leave] [can-list]" value="1"> </td>
                             </tr>

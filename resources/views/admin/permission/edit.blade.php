@@ -83,8 +83,9 @@
                             <tr>
                             <td>İzin formu</td>
                             <td></td>
-                            <td></td>                            
-                            <td></td>                            
+                            <td><input type ="checkbox" name="name[leave][can-edit]"  @if(isset($permission ['name'] ['leave']['can-edit'])) checked @endif value="1"></td>
+                            <td><input type ="checkbox" name="name[leave][can-delete]"  @if(isset($permission ['name'] ['leave']['can-delete'])) checked @endif value="1"></td>
+                                
                             <td></td>                     
                             <td><input type ="checkbox" name="name[leave][can-list]" @if(isset($permission ['name'] ['leave']['can-list'])) checked @endif value="1"></td>
                             

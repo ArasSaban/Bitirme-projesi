@@ -93,7 +93,7 @@ class RoleController extends Controller
     public function destroy($id)
     {
         Role::find($id)->delete();
-        return redirect()->Route('role.index')->with('message','silme başarıyla tamamlandı') ;
+        return redirect()->Route('roles.index')->with('message','silme başarıyla tamamlandı') ;
 
     }
 }

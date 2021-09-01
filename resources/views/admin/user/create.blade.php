@@ -43,7 +43,7 @@
                       <label>Tel No </label>
                       <input  type="text" name="mobile_number" class="form-control ">
                   </div>
-
+<br>
                   <div class="form-group">
                       <label>Department</label>
                       <select  name="department_id"  required="">
@@ -52,7 +52,7 @@
                         @endforeach
                       </select>
                   </div>
-                  
+                  <br>
                   <div class="form-group">
                       <label>Maaş</label>
                       <input  type="text" required=""  name="designation" class="form-control ">
@@ -64,7 +64,7 @@
                   </div>
 
                   <div class="form-group">
-                      <label>image</label>
+                      <label>Resim</label>
                       <input  type="file"  name="image" accept="image/*" class="form-control  ">
                   </div>
                 </div>
@@ -84,6 +84,8 @@
                       <label>Password</label>
                       <input  type="password" required="" name="password" class="form-control">
                   </div>
+                  <br>
+
                   <div class="form-group">
                       <label>Rol</label>
                       <select name="role_id" required="" name="role_id">

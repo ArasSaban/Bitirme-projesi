@@ -3,13 +3,13 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <div class="sb-sidenav-menu-heading">Ana Sayfa</div>
                             <a class="nav-link" href="{{url('/')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
                              
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <div class="sb-sidenav-menu-heading">Ana Menü</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Departman
@@ -25,7 +25,7 @@
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Kullancılar
+                                Çalışanlar
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
@@ -42,15 +42,15 @@
                                         </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="{{route('roles.index')}}" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Kullancılar
+                                        Çalışan
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
                                         @if(isset(auth()->user()->role->permission['name']['user']['can-list']))
-                                            <a class="nav-link" href="{{route('users.index')}}">Kullancılar</a> @endif
+                                            <a class="nav-link" href="{{route('users.index')}}">Çalışan listesi</a> @endif
                                             @if(isset(auth()->user()->role->permission['name']['user']['can-add']))
-                                            <a class="nav-link" href="{{route('users.create')}}">Kullancı Oluştur</a> @endif
+                                            <a class="nav-link" href="{{route('users.create')}}">Çalışan Oluştur</a> @endif
                                             
                                         </nav>
                                     </div>
@@ -101,22 +101,27 @@
                                             @if(isset(auth()->user()->role->permission['name']['notice']['can-add']))
                                             <a class="nav-link" href="{{route('notices.create')}}">Duyuru Oluştur</a> 
                                             @endif
+
+
                                         </nav>
                                     </div>
                            
                            
+            
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseMail" aria-expanded="false" aria-controls="pagesCollapseMail" >
+                            <div class="sb-nav-link-icon"><i class="fas fa-mail-bulk"></i></div> Mail
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseMail" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                       
+                                            
+                                            <a class="nav-link" href="{{route('mails.store')}}">Mail Gönderme</a> 
 
+                                        </nav>
+                                    </div>
+                           
 
-
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
                         </div>
                     </div>
                     <!-- <div class="sb-sidenav-footer">

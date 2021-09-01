@@ -16,8 +16,8 @@
                                             <th>No</th>
                                             <th>İsim</th>
                                             <th>Açıklama</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
+                                            <th>Güncelle</th>
+                                            <th>Sil</th>
                                             
                                         </tr>
                                        
@@ -58,6 +58,7 @@
                                                         <div class="modal-body">
                                                             Silmek istediğinizden emin misiniz ?
                                                         </div>
+                                                        
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Iptal</button>
                                                             <button type="submit" class="btn btn-danger">Sil</button>

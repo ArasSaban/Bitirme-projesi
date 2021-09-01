@@ -11,14 +11,17 @@ class SendMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $details;
+
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($details = [])
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -28,6 +31,11 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->subject('Mail from IKY company')->view('admin.email.sendemail')->attach($this->details['file']->getRealPath(),
+            [
+                'as' =>$this->details['file']->getClientOriginalName(),
+                'mime'=>$this->details['file']->getClientMimeType(),
+            ]);
+        
     }
 }

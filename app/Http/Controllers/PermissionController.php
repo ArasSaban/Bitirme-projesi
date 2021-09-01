@@ -39,7 +39,7 @@ class PermissionController extends Controller
             'role_id' => 'required|unique:permissions'
         ]);
         Permission::create($request->all());
-        return redirect()->back()->with('message','izinler güncelendi');
+        return redirect()->back()->with('message','izinler eklendi');
     }
 
     /**

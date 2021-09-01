@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+    @if(Session::has('Message'))
+                <div class="alert alert-success">
+                    {{Session::get('Message')}}
+                </div>    
+            @endif
         <div class="col-md-8 mt-5">
             <div class="card">
                 <div class="card-header">Mail Gönderme</div>
@@ -19,6 +24,7 @@
                         <select id ="department" name="department_id" class="form-control">
                            
                         @foreach(App\Models\Department::all() as $department)
+                            
                             <option value="{{$department->id}}"> {{$department->name}} </option>
                         @endforeach   
                         </select>
@@ -26,14 +32,15 @@
                            <br>
 
                         <select id ="person" name="user_id" class="form-control">
-                           
+                       
                            @foreach(App\Models\User::all() as $user)
                                <option value="{{$user->id}}"> {{$user->name}} </option>
                            @endforeach   
-                           </select>
-                           <br>
+                        </select>
+
+                        <br>
                            <div class="form-group">
-                                <label>Body</label>
+                                <label>Içerek</label>
                                 <textarea name="body" class="form-control">
 
                                 </textarea>

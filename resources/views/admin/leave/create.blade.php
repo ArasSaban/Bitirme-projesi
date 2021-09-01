@@ -99,11 +99,14 @@
         <span class="badge bg-danger">Red Edildi </span>
         @endif
       </td>
+      @if(isset(auth()->user()->role->permission['name']['leave']['can-edit']))
       <td>
       <a href="{{route('leaves.edit',[$leave->id])}}"> 
        <i class="fas fa-edit"></i></a>
       </td>
+    @endif
 
+    @if(isset(auth()->user()->role->permission['name']['leave']['can-delete']))
       <td>
       <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal{{$leave->id}}" > 
        <i class="fas fa-trash"></i>
@@ -132,7 +135,7 @@
                                                     </div>
                                                     </div>
       </td>
-
+@endif
     </tr>
     @endforeach
   </tbody>

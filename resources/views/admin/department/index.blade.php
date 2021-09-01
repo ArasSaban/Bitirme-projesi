@@ -3,6 +3,11 @@
 @section('content')
 <div class="container mt-5">
     <div class="row justify-content-center">
+    @if(Session::has('message'))
+                <div class="alert alert-success">
+                    {{Session::get('message')}}
+                </div>    
+            @endif
         <div class="col-md-12">
         <nav aria-label="breadcrumb">
          <ol class="breadcrumb">
